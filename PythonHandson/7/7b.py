@@ -1,4 +1,13 @@
-
+#7-4
+prompt="Please let me know what do you need,"
+prompt+="\nenter 'quit' when you finish.\n"
+message = ""
+while message !='quit':
+    message = input(prompt)
+    if message == 'quit':
+        break
+    else:
+        print(f"ok, we will add {message}.")
 
 #7-5
 prompt="Please let me know your age:\n"
