@@ -68,8 +68,10 @@ class User:
         """increase login attempts"""
         self.login_attempts +=1
 
-    def reset_
-
+    def reset_login_attempts(self):
+        """reset login attempts to 0"""
+        if self.login_attempts >=4:
+            self.login_attempts = 0
 
 first_user = User('Lucy', 'Wang',19)
 second_user = User('William', 'Zhang',13)
@@ -83,4 +85,9 @@ print(first_user.login_attempts)
 first_user.increment_login_attempts()
 print(first_user.login_attempts)
 first_user.increment_login_attempts()
+print(first_user.login_attempts)
+first_user.increment_login_attempts()
+print(first_user.login_attempts)
+
+first_user.reset_login_attempts()
 print(first_user.login_attempts)

@@ -1,6 +1,3 @@
-"""一组用于表示燃油汽车和电动汽车的类"""
-
-
 class Car:
     """一次模拟汽车的简单尝试。"""
 
@@ -35,7 +32,7 @@ class Car:
          """将里程表读数增加指定的量"""
          self.odometer_reading += miles
 
-class Battery:
+class Battery():
      """一次模拟电动汽车电瓶的简单尝试。"""
 
      def __init__(self,battery_size=75):
@@ -54,6 +51,9 @@ class Battery:
                range=315
           print(f"This car can go about {range} miles on a full charge.")
 
+
+
+
 class ElectricCar(Car):
      """电动汽车的独特之处"""
 
@@ -65,4 +65,15 @@ class ElectricCar(Car):
         super().__init__(make,model,year)
   #      self.battery_size = 75
         self.battery = Battery()
- 
+
+  #   def describe_battery(self):
+  #      """打印一条描述电瓶容量的消息"""
+  #      print(f"This car has a {self.battery_size}-kwh battery.")
+     
+
+my_tesla = ElectricCar('tesla','model s',2019)
+
+print(my_tesla.get_descriptive_name())
+
+my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
