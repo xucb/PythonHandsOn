@@ -46,7 +46,6 @@ class Lottery:
 my_lottery = Lottery()
 my_lottery.lucky_contents()
 
- 
 
 
 #9-15
