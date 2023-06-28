@@ -2,6 +2,7 @@
 #10-7
 def input_number():
     """用户输入数字"""
+    a=0
     while True:
         usernumber = input('Please enter a number: ')
         try:
@@ -9,7 +10,7 @@ def input_number():
             break
         except ValueError:
             print(f"This is not a valid number, please input a valid number.")
-        continue
+#            continue
     return usernumber
 
 while True:
