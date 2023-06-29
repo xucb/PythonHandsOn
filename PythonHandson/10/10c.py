@@ -42,4 +42,48 @@ print(f"the sum of your input is {sum}.")
 """
 
 
+#10-8 Cat and Dog
+filenames = ['cat.txt','dog.txt']
 
+for filename in filenames:
+    try:
+        with open(filename,encoding='utf-8') as f:
+            contents = f.read()
+    except FileNotFoundError:
+        print(f"Sorry, the file {filename} does not exist.")
+    else:
+        print(f"The file {filename} is:")
+        print(contents)
+#        print('\n')
+
+
+#10-9 Slient Cat and Dog
+filenames = ['cat.txt','dog.txt']
+
+for filename in filenames:
+    try:
+        with open(filename,encoding='utf-8') as f:
+            contents = f.read()
+    except FileNotFoundError:
+        pass
+    else:
+        print(f"The file {filename} is:")
+        print(contents)
+#        print('\n')
+
+
+#10-10 Count words
+
+
+def count_word(contents,word):
+    """计算一个单词在文章中出现了多少次"""
+    word_repeat=contents.count(word)
+    return word_repeat
+
+filename = 'alice.txt'
+with open (filename,encoding='utf-8') as f:
+    contents = f.read().lower()
+
+word = input("The word you want to count is:")
+word_repeat= count_word(contents,word.lower())
+print(f"The word {word} in file {filename} appears {word_repeat} times.")
